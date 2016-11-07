@@ -12,14 +12,15 @@
 
 class AdorkablePig;
 
+template<class entity_type>
 class State
 {
 public:
 	virtual ~State(){}
 
-	virtual void Enter(AdorkablePig*) = 0;
-	virtual void Execute(AdorkablePig*) = 0;
-	virtual void Exit(AdorkablePig*) = 0;
+	virtual void Enter(entity_type*) = 0;
+	virtual void Execute(entity_type*) = 0;
+	virtual void Exit(entity_type*) = 0;
 };
 
 #endif

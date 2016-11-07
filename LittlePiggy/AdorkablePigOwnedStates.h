@@ -8,7 +8,7 @@ class AdorkablePig;
 
 
 //在公司上班 赚钱
-class WorkInCompany : public State
+class WorkInCompany : public State<AdorkablePig>
 {
 private:
 	WorkInCompany() {}
@@ -24,7 +24,7 @@ public:
 };
 
 //在家睡觉 养足精神
-class SleepInHome : public State
+class SleepInHome : public State<AdorkablePig>
 {
 private:
 	SleepInHome() {}
@@ -40,7 +40,7 @@ public:
 };
 
 //给小猪钱 花钱
-class GiveMoneyInBank : public State
+class GiveMoneyInBank : public State<AdorkablePig>
 {
 private:
 	GiveMoneyInBank() {}

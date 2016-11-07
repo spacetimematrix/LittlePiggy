@@ -4,9 +4,8 @@
 
 #include "BaseGameEntity.h"
 #include "Locations.h"
+#include "State.h"
 
-
-class State;
 
 const int MaxMoney = 5000;
 const int MaxTired = 100;
@@ -14,7 +13,7 @@ const int MaxTired = 100;
 class AdorkablePig : public BaseGameEntity
 {
 private:
-	State*			m_pCurrentState;
+	State<AdorkablePig>*			m_pCurrentState;
 	location_type	m_location;
 
 	int				m_iMoneyInBody;
@@ -25,7 +24,7 @@ public:
 
 	void Update();
 
-	void ChangeState(State* new_state);
+	void ChangeState(State<AdorkablePig>* new_state);
 
 	location_type	Location()const { return m_location; }
 	void			ChangeLocation(const location_type loc) { m_location = loc; }

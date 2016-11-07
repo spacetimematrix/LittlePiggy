@@ -14,7 +14,7 @@ m_pCurrentState(SleepInHome::Instance()){}
 
 //--------------------------- ChangeState -------------------------------------
 //-----------------------------------------------------------------------------
-void AdorkablePig::ChangeState(State* pNewState)
+void AdorkablePig::ChangeState(State<AdorkablePig>* pNewState)
 {
 	assert(m_pCurrentState && pNewState);
 
